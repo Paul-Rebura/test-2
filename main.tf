@@ -16,12 +16,12 @@ variable "env" {
   type        = string
 }
 
-# resource "aws_sns_topic" "pipeline-3" {
-#   name = "pipeline-3-topic-${var.env}"
-#   tags = {
-#     Environment = var.env
-#     pipeline    = "pipeline-3-${var.env}"
-#     owner       = "team-c-${var.env}"
-#     deployed    = "terraform"
-#   }
-# }
+resource "aws_sns_topic" "pipeline-3" {
+  name = "pipeline-3-topic-${var.env}"
+  tags = {
+    Environment = var.env
+    pipeline    = "pipeline-3-${var.env}"
+    owner       = "team-c-${var.env}"
+    deployed    = "terraform"
+  }
+}
